@@ -1,0 +1,4 @@
+/bazel-bin
+/bazel-out
+/bazel-papercraft-dungeon-generator
+/bazel-testlogs
