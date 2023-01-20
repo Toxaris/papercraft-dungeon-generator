@@ -1,1 +1,1 @@
-# papercraft-dungeon-generator
+# Generator for papercraft dungeon tiles
