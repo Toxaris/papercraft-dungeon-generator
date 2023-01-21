@@ -1,7 +1,9 @@
 {
     "type": "module",
     "dependencies": {
-        "chalk":"^5.2.0"
+        "@svgdotjs/svg.js": "^3.1.2",
+        "chalk": "^5.2.0",
+        "svgdom": "^0.1.11"
     },
     "devDependencies": {
        "@tsconfig/node-lts-strictest-esm": "18.12.1",

@@ -20,8 +20,10 @@ ts_project(
         "package.json",
     ],
     deps = [
+        ":node_modules/@svgdotjs/svg.js",
         ":node_modules/@types/node",
         ":node_modules/chalk",
+        ":node_modules/svgdom",
     ]
 )
 
