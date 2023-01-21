@@ -1,5 +1,10 @@
 {
+    "type": "module",
     "dependencies": {
         "chalk":"^5.2.0"
+    },
+    "devDependencies": {
+       "@tsconfig/node-lts-strictest-esm": "18.12.1",
+       "@types/node": "18.11.18"
     }
 }

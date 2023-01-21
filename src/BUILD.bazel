@@ -1,12 +1,34 @@
 load("@aspect_rules_js//js:defs.bzl", "js_binary")
+load("@aspect_rules_ts//ts:defs.bzl", "ts_config", "ts_project")
 load("@npm//:defs.bzl", "npm_link_all_packages")
 
 npm_link_all_packages()
 
+ts_config(
+    name = "tsconfig",
+    src = "tsconfig.json",
+    deps = [
+        ":node_modules/@tsconfig/node-lts-strictest-esm",
+    ]
+)
+
+ts_project(
+    name = "src",
+    srcs = glob(["*.ts"]),
+    tsconfig = ":tsconfig",
+    data = [
+        "package.json",
+    ],
+    deps = [
+        ":node_modules/@types/node",
+        ":node_modules/chalk",
+    ]
+)
+
 js_binary(
     name = "bin",
-    entry_point = "index.mjs",
+    entry_point = "index.js",
     data = [
-        ":node_modules/chalk",
+        ":src",
     ]
 )
