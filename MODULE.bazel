@@ -1,0 +1,1 @@
+bazel_dep(name = "aspect_rules_js", version = "1.15.1")
