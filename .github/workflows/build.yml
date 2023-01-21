@@ -22,4 +22,4 @@ jobs:
           path: "~/.cache/bazel"
           key: bazel
       - name: Build 
-        run: bazel --version
+        run: bazel build ...
