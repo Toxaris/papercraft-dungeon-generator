@@ -1,3 +1,5 @@
+**/node_modules
+
 /bazel-bin
 /bazel-out
 /bazel-papercraft-dungeon-generator
