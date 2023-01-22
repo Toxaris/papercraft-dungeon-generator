@@ -5,7 +5,7 @@
 NPM dependencies are declared with version ranges in `package.json` and then repeated without version ranges in `BUILD.bazel`. To reflect changes in `package.json` or to set up your editor or other local tooling, run
 
 ```
-bazel run @pnpm//:pnpm -- install --dir "$PWD"
+tools/pnpm install
 ```
 
 in the repository root. It will do the following things:
