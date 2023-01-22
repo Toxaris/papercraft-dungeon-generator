@@ -12,5 +12,6 @@ const picture = SVG()
 picture.rect(100, 100).fill('yellow').move(50,50)
 
 // show the world
-console.log(chalk.red("Hello") + " " + chalk.green("World"));
+console.error(chalk.red("Generating ..."));
 console.log(picture.svg());
+console.error(chalk.green("... done!"));
