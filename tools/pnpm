@@ -1,3 +1,0 @@
-#! /bin/sh
-
-bazel run @pnpm//:pnpm -- --dir "$PWD" "$@"

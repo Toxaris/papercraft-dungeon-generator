@@ -1,0 +1,5 @@
+#! /bin/bash
+
+function pnpm() {
+    bazel run @pnpm//:pnpm -- --dir "$PWD" "$@"
+}
