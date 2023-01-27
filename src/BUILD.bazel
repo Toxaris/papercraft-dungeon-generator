@@ -9,28 +9,28 @@ ts_config(
     src = "tsconfig.json",
     deps = [
         ":node_modules/@tsconfig/node-lts-strictest-esm",
-    ]
+    ],
 )
 
 ts_project(
     name = "src",
     srcs = glob(["*.ts"]),
-    tsconfig = ":tsconfig",
     data = [
         "package.json",
     ],
+    tsconfig = ":tsconfig",
     deps = [
         ":node_modules/@svgdotjs/svg.js",
         ":node_modules/@types/node",
         ":node_modules/chalk",
         ":node_modules/svgdom",
-    ]
+    ],
 )
 
 js_binary(
     name = "bin",
-    entry_point = "index.js",
     data = [
         ":src",
-    ]
+    ],
+    entry_point = "index.js",
 )

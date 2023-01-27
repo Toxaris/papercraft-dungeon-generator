@@ -1,5 +1,5 @@
 workspace(
-    name = "papercraft_dungeon_generator"
+    name = "papercraft_dungeon_generator",
 )
 
 # fetch direct ruleset dependencies
@@ -48,7 +48,7 @@ rules_format_dependencies()
 load("@aspect_rules_js//npm:npm_import.bzl", "pnpm_repository")
 
 pnpm_repository(
-    name = "pnpm"
+    name = "pnpm",
 )
 
 # setup nodejs

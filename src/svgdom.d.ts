@@ -1,3 +1,3 @@
-declare module 'svgdom' {
-    function createSVGWindow(): Window;
+declare module "svgdom" {
+  function createSVGWindow(): Window;
 }
