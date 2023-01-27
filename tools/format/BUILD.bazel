@@ -1,0 +1,4 @@
+alias(
+    name = "format",
+    actual = "@aspect_rules_format//format",
+)

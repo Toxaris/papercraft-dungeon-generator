@@ -20,6 +20,13 @@ http_archive(
     url = "https://github.com/aspect-build/rules_ts/archive/refs/tags/v1.1.0.tar.gz",
 )
 
+http_archive(
+    name = "aspect_rules_format",
+    sha256 = "cc9337eb846bd08df2f977c299ab9f6d9f9e9ba171061fd31847fc9bdc1f17ec",
+    strip_prefix = "bazel-super-formatter-1.0.0",
+    url = "https://github.com/aspect-build/bazel-super-formatter/archive/refs/tags/v1.0.0.tar.gz",
+)
+
 # fetch indirect ruleset dependencies
 
 load("@aspect_rules_js//js:repositories.bzl", "rules_js_dependencies")
@@ -31,6 +38,10 @@ load("@aspect_rules_ts//ts:repositories.bzl", "rules_ts_dependencies")
 rules_ts_dependencies(
     ts_version_from = "//:package.json",
 )
+
+load("@aspect_rules_format//format:repositories.bzl", "rules_format_dependencies")
+
+rules_format_dependencies()
 
 # setup pnpm
 
@@ -62,3 +73,16 @@ npm_translate_lock(
 load("@npm//:repositories.bzl", "npm_repositories")
 
 npm_repositories()
+
+# setup npm dependencies of rules_format
+
+load("@aspect_rules_format//format:dependencies.bzl", "parse_dependencies")
+
+parse_dependencies()
+
+# setup missing toolchains for rules_format
+# (keep this at the end of the WORKSPACE.bazel to avoid overriding our own toolchain configuration)
+
+load("@aspect_rules_format//format:toolchains.bzl", "format_register_toolchains")
+
+format_register_toolchains()
