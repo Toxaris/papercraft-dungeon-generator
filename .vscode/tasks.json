@@ -5,7 +5,10 @@
       "label": "build",
       "command": "bazel build ...",
       "type": "shell",
-      "group": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "presentation": {
         "reveal": "silent"
       },
