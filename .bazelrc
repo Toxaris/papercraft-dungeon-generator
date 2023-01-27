@@ -1,6 +1,6 @@
 # disable formatting for languages we don't use
 
-common --@aspect_rules_format//format:java_enabled=false
-common --@aspect_rules_format//format:python_enabled=false
-common --@aspect_rules_format//format:swift_enabled=false
-common --@aspect_rules_format//format:proto_enabled=false
+run --@aspect_rules_format//format:java_enabled=false
+run --@aspect_rules_format//format:python_enabled=false
+run --@aspect_rules_format//format:swift_enabled=false
+run --@aspect_rules_format//format:proto_enabled=false
