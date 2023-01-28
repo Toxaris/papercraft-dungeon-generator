@@ -7,6 +7,13 @@ workspace(
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
+    name = "aspect_rules_format",
+    sha256 = "cc9337eb846bd08df2f977c299ab9f6d9f9e9ba171061fd31847fc9bdc1f17ec",
+    strip_prefix = "bazel-super-formatter-1.0.0",
+    url = "https://github.com/aspect-build/bazel-super-formatter/archive/refs/tags/v1.0.0.tar.gz",
+)
+
+http_archive(
     name = "aspect_rules_js",
     sha256 = "928ba25fa82cfe7983f89118677413dc74dbc5d0360fa969da07ff22a9306052",
     strip_prefix = "rules_js-1.15.1",
@@ -18,13 +25,6 @@ http_archive(
     sha256 = "617cc11d2ae4fe64218323da1c3776e7d25f9f45d88c1addda675d7ad736f683",
     strip_prefix = "rules_ts-1.1.0",
     url = "https://github.com/aspect-build/rules_ts/archive/refs/tags/v1.1.0.tar.gz",
-)
-
-http_archive(
-    name = "aspect_rules_format",
-    sha256 = "cc9337eb846bd08df2f977c299ab9f6d9f9e9ba171061fd31847fc9bdc1f17ec",
-    strip_prefix = "bazel-super-formatter-1.0.0",
-    url = "https://github.com/aspect-build/bazel-super-formatter/archive/refs/tags/v1.0.0.tar.gz",
 )
 
 # fetch indirect ruleset dependencies
