@@ -8,5 +8,11 @@
     }
   },
 
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode"]
+    }
+  }
 }
