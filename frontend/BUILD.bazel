@@ -6,8 +6,8 @@ load("@npm//:defs.bzl", "npm_link_all_packages")
 npm_link_all_packages()
 
 CRA_DEPS = [
-    "//src",
-    "//public",
+    "//frontend/src",
+    "//frontend/public",
     "package.json",
     ":node_modules/eslint-config-react-app",
     ":node_modules/react-dom",
