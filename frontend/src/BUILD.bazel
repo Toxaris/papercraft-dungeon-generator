@@ -39,11 +39,11 @@ ts_project(
     ),
     declaration = True,
     resolve_json_module = True,
-    tsconfig = "//:tsconfig",
+    tsconfig = "//frontend:tsconfig",
     deps = [
-        "//:node_modules/react",
-        "//:node_modules/react-dom",
-        "//:node_modules/web-vitals",
+        "//frontend:node_modules/react",
+        "//frontend:node_modules/react-dom",
+        "//frontend:node_modules/web-vitals",
     ],
 )
 
@@ -52,23 +52,23 @@ ts_project(
     srcs = glob(TEST_PATTERNS),
     declaration = True,
     resolve_json_module = True,
-    tsconfig = "//:tsconfig",
+    tsconfig = "//frontend:tsconfig",
     deps = [
         ":src_ts",
-        "//:node_modules/@testing-library/jest-dom",
-        "//:node_modules/@testing-library/react",
-        "//:node_modules/@types/jest",
+        "//frontend:node_modules/@testing-library/jest-dom",
+        "//frontend:node_modules/@testing-library/react",
+        "//frontend:node_modules/@types/jest",
     ],
 )
 
 jest_test(
     name = "src_test",
-    config = "//:jest_config",
+    config = "//frontend:jest_config",
     data = [
         ":src",
         ":src_test_ts",
-        "//:node_modules/jest-environment-jsdom",
-        "//:node_modules/jest-transform-stub",
+        "//frontend:node_modules/jest-environment-jsdom",
+        "//frontend:node_modules/jest-transform-stub",
     ],
 )
 
@@ -79,7 +79,7 @@ eslint_bin.eslint_test(
         p,
     ) for p in SRC_PATTERNS],
     data = [
-        "//:package_json",
-        "//:node_modules/eslint-config-react-app",
+        "//frontend:package_json",
+        "//frontend:node_modules/eslint-config-react-app",
     ] + glob(SRC_PATTERNS),
 )
