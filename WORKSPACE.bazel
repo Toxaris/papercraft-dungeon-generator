@@ -114,8 +114,8 @@ npm_translate_lock(
         },
     },
     public_hoist_packages = {
-        "eslint-config-react-app": [""],
-        "eslint": [""],
+        "eslint-config-react-app": ["frontend"],
+        "eslint": ["frontend"],
     },
 )
 
