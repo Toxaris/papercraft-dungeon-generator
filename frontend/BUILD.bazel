@@ -22,6 +22,7 @@ cra_bin.react_scripts(
     # https://create-react-app.dev/docs/advanced-configuration/
     name = "build",
     args = ["build"],
+    chdir = package_name(),
     srcs = CRA_DEPS,
     env = {"BUILD_PATH": "./build"},
     out_dirs = ["build"],
