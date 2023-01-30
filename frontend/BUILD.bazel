@@ -38,6 +38,7 @@ js_run_devserver(
     name = "start",
     args = ["start"],
     command = "node_modules/.bin/react-scripts",
+    chdir = package_name(),
     data = CRA_DEPS,
 )
 
