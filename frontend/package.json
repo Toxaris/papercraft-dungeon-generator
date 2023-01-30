@@ -41,21 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "pnpm": {
-    "packageExtensions": {
-      "@typescript-eslint/eslint-plugin": {
-        "peerDependencies": {
-          "eslint": "*"
-        }
-      },
-      "postcss-loader": {
-        "peerDependencies": {
-          "postcss-flexbugs-fixes": "*",
-          "postcss-preset-env": "*",
-          "postcss-normalize": "*"
-        }
-      }
-    }
   }
 }
