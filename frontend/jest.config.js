@@ -1,7 +1,7 @@
 module.exports = {
-  testEnvironment: 'jsdom',
+  testEnvironment: "jsdom",
   transform: {
-    '^.+\\.svg$': 'jest-transform-stub',
-    '^.+\\.css$': 'jest-transform-stub',
+    "^.+\\.svg$": "jest-transform-stub",
+    "^.+\\.css$": "jest-transform-stub",
   },
 };
